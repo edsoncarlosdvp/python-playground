@@ -5,7 +5,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from email_bodies import email_bodies
-from model_ia.model_ia import model_ia
+from model_ia.model_ia_content import model_ia_content
 
 
 def email_summarizer():
@@ -21,7 +21,7 @@ def email_summarizer():
       f"{emails_formatted}"
     )
     
-    resumed = model_ia(prompt)
+    resumed = model_ia_content(prompt)
       
     return resumed
 
