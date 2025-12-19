@@ -21,8 +21,10 @@ def email_summarizer():
       f"{emails_formatted}"
     )
     
-    resumed = model_ia_content(prompt)
-      
-    return resumed
+    summarized = model_ia_content(prompt)
 
+    with open("list_of_email_summaries.txt", "a", encoding="utf-8") as file:
+      file.write(summarized + "\n")
+
+    return summarized
 print(email_summarizer())

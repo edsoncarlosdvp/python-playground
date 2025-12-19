@@ -1,4 +1,4 @@
-email_bodies = emails = [
+email_bodies = [
     """Olá, tudo bem?
 
 Gostaria de confirmar nossa reunião de amanhã às 14h para alinharmos o cronograma do projeto.
