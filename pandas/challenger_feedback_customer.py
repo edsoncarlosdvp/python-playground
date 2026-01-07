@@ -1,5 +1,6 @@
 import sys
 import os
+import time
 import pandas as pd
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
@@ -24,3 +25,7 @@ for review_number, resenha in enumerate(collumns_reviews_text):
   result = f"Resenha {review_number + 1}: '{resenha}' -> Sentimento: {contents}"
   list_ranked_feedbacks.append(result)
   print(result)
+
+  if review_number < len(collumns_reviews_text) - 1:
+    time.sleep(3)
+df_reviews["sentiment"] = list_ranked_feedbacks
